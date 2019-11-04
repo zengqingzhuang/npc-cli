@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+const chalk = require('chalk')
+const program = require('commander');
+const update = require('../src/update');
+
+program.on('--help', function () {
+  console.log();
+  console.log('  Examples:');
+  console.log();
+  console.log(chalk.gray('    # update npc framwork'));
+  console.log('    $ npc update');
+  console.log();
+});
+
+program.parse(process.argv);
+update();

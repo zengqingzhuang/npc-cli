@@ -1,0 +1,31 @@
+#!/usr/bin/env node
+
+const program = require('commander');
+const chalk = require('chalk');
+const init = require('../src/init');
+
+const getList = val => val ? val.split(',') : [];
+
+program
+    .usage('<template-name> [project-name]')
+    .option('--private [private]', 'create private cloud develop env')
+    .option('--public [public]', 'create public cloud develop env')
+    .option('-l, --code-list <code-list>', 'business code list', getList)
+    .option('-u, --user [user]', 'git user name', 'git')
+    .option('-h, --host [host]', 'git host', 'icode.baidu.com')
+    .option('-p, --port [port]', 'git port', '8235')
+    .parse(process.argv);
+
+const type = program.private ? 'private' : 'public';
+
+program.on('--help', () => {
+    console.log('  Examples:')
+    console.log()
+    console.log(chalk.gray(`    # init a new ${type} project from the git address`))
+    console.log()
+    console.log(chalk.gray(`    # private or public and code params is must`))
+    console.log()
+    console.log('    $ npc init --private --code bcc,dcc')
+    console.log()
+});
+init(program);
