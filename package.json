@@ -1,7 +1,7 @@
 {
-    "name": "@baidu/npc",
+    "name": "npc",
     "version": "0.0.1",
-    "description": "云产品脚手架",
+    "description": "脚手架",
     "scripts": {},
     "repository": {
         "type": "git",
