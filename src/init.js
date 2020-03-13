@@ -50,7 +50,7 @@ const gitPath = (program, code) => {
         const directory = 
             (program.private && (code === 'fe-common' || program.codeList.includes(code)))
             ? 'bce-private-console' : 'bce-console';
-        const cmd = `git clone ssh://${user}@${host}:${port}/baidu/${directory}/${codeName} ${code}`
+        const cmd = `git clone ssh://${user}@${host}:${port}/bd/${directory}/${codeName} ${code}`
                     + ` && `
                     + `scp -p -P ${port} ${user}@${host}:hooks/commit-msg ${code}/.git/hooks/`;
         return execAsync(cmd).catch(() => process.exit(1));
@@ -132,7 +132,7 @@ module.exports = program => {
             $$ ./server.sh
 
             # Open browser
-            $$ open https://localhost.qasandbox.bcetest.baidu.com:8899/?ed&no_xss
+            $$ open https://tmall.com
         `;
         logger.info(help);
         process.exit(0);

@@ -12,8 +12,8 @@ program
     .option('--public [public]', 'create public cloud develop env')
     .option('-l, --code-list <code-list>', 'business code list', getList)
     .option('-u, --user [user]', 'git user name', 'git')
-    .option('-h, --host [host]', 'git host', 'icode.baidu.com')
-    .option('-p, --port [port]', 'git port', '8235')
+    .option('-h, --host [host]', 'git host', 'baidu.com')
+    .option('-p, --port [port]', 'git port', '8000')
     .parse(process.argv);
 
 const type = program.private ? 'private' : 'public';

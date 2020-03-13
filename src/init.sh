@@ -18,14 +18,14 @@ rm -rf dep src
 if [ ! -d "tools" ];
 then
     echo "下载fe-tools代码库中..."
-    git clone ssh://git@icode.baidu.com:8235/baidu/bce-console/fe-tools tools
+    git clone ssh地址/fe-tools tools
     echo "fe-tools下载成功并已更名为tools"
 fi
 
 if [ ! -d "mockup" ];
 then
     echo "下载fe-mockup代码库中..."
-    git clone ssh://git@icode.baidu.com:8235/baidu/bce-console/fe-mockup mockup
+    git clone ssh地址/fe-mockup mockup
     cd mockup && git checkout mockup_private
     cd ../
     echo "fe-mockup下载成功并已更名为mockup"
@@ -34,14 +34,14 @@ fi
 if [ ! -d "fe-base" ];
 then
     echo "下载fe-base代码库中..."
-    git clone ssh://git@icode.baidu.com:8235/baidu/bce-console/fe-base fe-base
+    git clone ssh地址/fe-base fe-base
     echo "fe-base下载成功"
 fi
 
 if [ ! -d "fe-common" ];
 then
     echo "下载fe-common代码库中..."
-    git clone ssh://git@icode.baidu.com:8235/baidu/bce-private-console/fe-common fe-common
+    git clone ssh地址/fe-common fe-common
     echo "fe-common下载成功"
 fi
 
